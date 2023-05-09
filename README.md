@@ -1,7 +1,7 @@
 # CIFAR-10 Soft-Classification
- This repository contains a Colab notebook that trains a ResNet18 architecture on CIFAR-10 using a novel training approach based on soft labels. Soft labels are derived directly over the course of training by computing a weighted average between the _true label_ (one-hot vector) and a _similarity label_.\\
+ This repository contains a Colab notebook that trains a ResNet18 architecture on CIFAR-10 using a novel training approach based on soft labels. Soft labels are derived directly over the course of training by computing a weighted average between the _true label_ (one-hot vector) and a _similarity label_.\
 
-The _similarity labels_ are derived mini-batch-wise and are computed so that each of their entry corresponds to how much a class-label describes the instance. More specifically, the _similarity label_ for a single training sample is derived by computing the average class-wise similarity of that observations to all the other observations present within the same mini-batch. \\
+The _similarity labels_ are derived mini-batch-wise and are computed so that each of their entry corresponds to how much a class-label describes the instance. More specifically, the _similarity label_ for a single training sample is derived by computing the average class-wise similarity of that observations to all the other observations present within the same mini-batch. \
 
 To get a more concrete idea about how the soft labels are computed, it might be useful to consider a simplified example. Let's imagine that the network needs to learn only four object classes (_cat_, _dog_, _elephant_ and _butterfly_) and we derived the following _similarity label_ for the picture for a German sheperd:
 
